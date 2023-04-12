@@ -11,3 +11,7 @@ class CompanyViewSet(viewsets.ModelViewSet):
 class EmployeeViewSet(viewsets.ModelViewSet):
     serializer_class = EmployeeSerializer
     queryset = Employee.objects.all()
+
+class DeviceViewSet(viewsets.ModelViewSet):
+    serializer_class = DeviceSerializer
+    queryset = Device.objects.all()
