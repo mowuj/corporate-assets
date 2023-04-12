@@ -23,3 +23,13 @@ class Device(models.Model):
     company=models.CharField(max_length = 150)
     def __str__(self):
         return self.name
+
+class Checkout(models.Model):
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    device = models.ForeignKey(Device, on_delete=models.CASCADE)
+    checkout_date=models.DateField(auto_now=True)
+    return_date=models.DateField(auto_now=False)
+    condition_out=models.CharField(max_length = 150)
+    condition_return=models.CharField(max_length = 150)
+    def __str__(self):
+        return self.device.name

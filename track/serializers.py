@@ -17,3 +17,17 @@ class DeviceSerializer(serializers.ModelSerializer):
         model=Device
         fields = '__all__'
 
+class DeviceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Device
+        fields = '__all__'
+
+
+class CheckoutSerializer(serializers.ModelSerializer):
+    device = serializers.CharField(source='device.name')
+    employee = serializers.CharField(source='employee.name')
+    class Meta:
+        model=Checkout
+        fields = '__all__'
+
+

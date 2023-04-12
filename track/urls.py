@@ -5,6 +5,7 @@ router = routers.DefaultRouter()
 router.register(r'company', CompanyViewSet)
 router.register(r'employee', EmployeeViewSet)
 router.register(r'device', DeviceViewSet)
+router.register(r'checkout', CheckoutViewSet)
 
 urlpatterns = [
 

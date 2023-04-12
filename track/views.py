@@ -15,3 +15,7 @@ class EmployeeViewSet(viewsets.ModelViewSet):
 class DeviceViewSet(viewsets.ModelViewSet):
     serializer_class = DeviceSerializer
     queryset = Device.objects.all()
+
+class CheckoutViewSet(viewsets.ModelViewSet):
+    serializer_class = CheckoutSerializer
+    queryset = Checkout.objects.all()
