@@ -19,3 +19,7 @@ class DeviceViewSet(viewsets.ModelViewSet):
 class CheckoutViewSet(viewsets.ModelViewSet):
     serializer_class = CheckoutSerializer
     queryset = Checkout.objects.all()
+
+class DeviceLogViewSet(viewsets.ModelViewSet):
+    serializer_class = DeviceLogSerializer
+    queryset = DeviceLog.objects.all()

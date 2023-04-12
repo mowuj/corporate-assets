@@ -30,6 +30,10 @@ class Checkout(models.Model):
     checkout_date=models.DateField(auto_now=True)
     return_date=models.DateField(auto_now=False)
     condition_out=models.CharField(max_length = 150)
-    condition_return=models.CharField(max_length = 150)
+    
     def __str__(self):
-        return self.device.name
+        return self.employee.name
+
+class DeviceLog(models.Model):
+    checkout = models.ForeignKey(Checkout, on_delete=models.CASCADE)
+    condition_return=models.CharField(max_length = 150)

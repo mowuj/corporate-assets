@@ -24,10 +24,14 @@ class DeviceSerializer(serializers.ModelSerializer):
 
 
 class CheckoutSerializer(serializers.ModelSerializer):
-    device = serializers.CharField(source='device.name')
-    employee = serializers.CharField(source='employee.name')
+    # device = serializers.CharField(source='device.name', read_only=True)
+    # employee = serializers.CharField(source='employee.name')
     class Meta:
         model=Checkout
         fields = '__all__'
 
 
+class DeviceLogSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DeviceLog
+        fields = '__all__'
